@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.1 0.012 240;
+    --foreground: 0.92 0.01 240;
+    --card: 0.14 0.02 240;
+    --card-foreground: 0.92 0.01 240;
+    --popover: 0.14 0.02 240;
+    --popover-foreground: 0.92 0.01 240;
+    --primary: 0.55 0.18 260;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.23 0.02 240;
+    --secondary-foreground: 0.92 0.01 240;
+    --muted: 0.18 0.02 240;
+    --muted-foreground: 0.58 0.02 240;
+    --accent: 0.55 0.18 260;
+    --accent-foreground: 1 0 0;
+    --destructive: 0.58 0.18 27;
+    --destructive-foreground: 1 0 0;
+    --border: 0.23 0.02 240;
+    --input: 0.11 0.015 240;
+    --ring: 0.55 0.18 260;
+    --radius: 0.75rem;
+    --success: 0.74 0.18 158;
+    --chart-up: 0.74 0.18 158;
+    --chart-down: 0.58 0.18 27;
+    --cta-buy: 0.79 0.2 155;
+    --cta-buy-foreground: 0.1 0.012 240;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+  }
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: oklch(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(var(--border));
+    border-radius: 2px;
+  }
+}
